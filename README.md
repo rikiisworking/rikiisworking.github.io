@@ -18,3 +18,26 @@ A static one-page profile (EN / 日本語). No build step is needed: `index.html
 - Light/dark follows the visitor's OS until they click the theme button; the choice is remembered in their browser.
 - Printing or "Save as PDF" uses a dedicated A4 layout (always light, Bisonai details expanded).
 - `og.png` (1200×630) is the link-preview image for LinkedIn, Slack, etc. If the domain changes, update the `og:url`, `og:image` and `canonical` tags in `<head>`.
+- To change the preview image, edit the TEXT block at the top of `tools/og.swift`, then run `sh tools/make-og.sh` (macOS; downloads Noto Sans once into `tools/.cache/`).
+
+## Maintenance
+
+**Update flow:** edit, preview, then commit and push. Pages redeploys in about a minute.
+
+```sh
+python3 -m http.server 8000      # preview at http://localhost:8000 (check EN/JA, light/dark, mobile)
+git commit -am "Update …" && git push
+```
+
+**Updates itself:** the current job's timeline bar (no `data-to`) and the footer year.
+
+**Review when your role changes, or every ~6 months:**
+
+- Career: current role; set `data-to="YYYY.MM"` on a finished job's timeline bar; add new jobs
+- Intro: status line and summary
+- Languages: "Studying for N1" badge
+- Tech stack chips
+- Impact numbers
+- `og.png` if the role, location or metrics change (then refresh LinkedIn's cache with Post Inspector)
+
+**Reference material:** `reference/` holds the résumé sources the page is based on (職務経歴書, 履歴書, English résumé, intro deck). It is **git-ignored on purpose**: the files contain your phone number, birth date and address, and this repo is public. When you update your résumé, replace the files there and sync the page to match.
