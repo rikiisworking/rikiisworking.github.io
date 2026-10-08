@@ -695,6 +695,8 @@
             <li class="chip"><i class="ic" data-si="nodedotjs"></i>Node.js</li>
             <li class="chip txt">SQL</li>
             <li class="chip"><i class="ic" data-si="solidity"></i>Solidity</li>
+            <li class="chip"><i class="ic" data-si="c"></i>C</li>
+            <li class="chip"><i class="ic" data-dv="csharp/csharp-plain"></i>C#</li>
           </ul>
         </div>
         <div class="stack-row">
@@ -717,6 +719,9 @@
             <li class="chip"><i class="ic" data-si="postgresql"></i>PostgreSQL</li>
             <li class="chip"><i class="ic" data-si="mysql"></i>MySQL</li>
             <li class="chip"><i class="ic" data-si="oracle"></i>Oracle</li>
+            <li class="chip"><i class="ic" data-dv="microsoftsqlserver/microsoftsqlserver-plain"></i>MSSQL</li>
+            <li class="chip"><i class="ic" data-si="clickhouse"></i>ClickHouse</li>
+            <li class="chip"><i class="ic" data-si="mongodb"></i>MongoDB</li>
             <li class="chip"><i class="ic" data-si="amazondynamodb"></i>DynamoDB</li>
             <li class="chip"><i class="ic" data-si="redis"></i>Redis</li>
           </ul>
@@ -732,8 +737,10 @@
             <li class="chip"><i class="ic" data-si="grafana"></i>Grafana</li>
             <li class="chip"><i class="ic" data-si="terraform"></i>Terraform</li>
             <li class="chip"><i class="ic" data-si="nginx"></i>nginx</li>
+            <li class="chip txt">Supervisord</li>
             <li class="chip"><i class="ic" data-si="githubactions"></i>GitHub Actions</li>
             <li class="chip"><i class="ic" data-si="circleci"></i>CircleCI</li>
+            <li class="chip"><i class="ic" data-si="jenkins"></i>Jenkins</li>
           </ul>
         </div>
         <div class="stack-row">
@@ -1096,10 +1103,12 @@
   });
 
   // ----- Logos (monochrome, tinted via CSS mask) -----
-  // Simple Icons for most tech; LobeHub icons for AI tools Simple Icons lacks (IBM, Cursor, xAI)
+  // Simple Icons for most tech; LobeHub for AI tools it lacks (IBM, Cursor, xAI);
+  // Devicon "plain" variants for the rest (C#, SQL Server)
   var SOURCES = {
     si: 'https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/',
-    lh: 'https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.90.0/icons/'
+    lh: 'https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.90.0/icons/',
+    dv: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'
   };
   Object.keys(SOURCES).forEach(function (key) {
     document.querySelectorAll('[data-' + key + ']').forEach(function (el) {

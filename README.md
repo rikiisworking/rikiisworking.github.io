@@ -14,7 +14,7 @@ A static one-page profile (EN / 日本語). No build step is needed: `index.html
 ## Editing
 
 - Every piece of text appears twice, as `<span lang="en">…</span><span lang="ja">…</span>`. Edit both.
-- Tech logos are [Simple Icons](https://simpleicons.org) v13.21.0 (`data-si="<slug>"`); AI-tool logos missing there (IBM, Cursor, xAI) come from [LobeHub Icons](https://lobehub.com/icons) v1.90.0 (`data-lh="<slug>"`).
+- Tech logos are [Simple Icons](https://simpleicons.org) v13.21.0 (`data-si="<slug>"`); AI-tool logos missing there (IBM, Cursor, xAI) come from [LobeHub Icons](https://lobehub.com/icons) v1.90.0 (`data-lh="<slug>"`); anything else (C#, SQL Server) uses [Devicon](https://devicon.dev) v2.16.0 plain variants (`data-dv="<name>/<name>-plain"`). Chips with no logo anywhere (SQL, REST, WebSocket, SSE, Protobuf, Supervisord) use the `chip txt` dot style.
 - Career timeline bars use `data-from="YYYY.MM"` / `data-to="YYYY.MM"`. A bar with no `data-to` runs to today.
 - Palette: warm paper `#F7F6F2`, ink `#15181D`, one accent `#00749C` (Go cyan, deepened). A dark variant follows the OS setting. All colours are tokens at the top of the `<style>` block.
 - Light/dark follows the visitor's OS until they click the theme button; the choice is remembered in their browser.
