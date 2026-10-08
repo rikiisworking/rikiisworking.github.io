@@ -1,5 +1,7 @@
 # Changho Park — profile page
 
+**Live site: [rikiisworking.github.io](https://rikiisworking.github.io/)**
+
 A static one-page profile (EN / 日本語). No build step is needed: `index.html` is the whole site.
 
 ## Publish on GitHub Pages
